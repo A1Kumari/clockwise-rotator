@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title></title>
+        <link rel=" stylesheet" href="clockwiseRotatorCss.css">
+        <script src="https://kit.fontawesome.com/16f6a8bd71.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class = 'main'>
+            <nav>
+                <div class="logo">
+                    <img src="logo.jpg">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Phone</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Cart</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="information">
+                <div class="overlay"></div>
+                <img src = "mobile.jpg" class = 'mobile'>
+                <div id="circle">
+                    <div class="feature one ">
+                        <i class="fa-solid fa-aperture"></i>
+                        <div>
+                            <h1>Camera</h1>
+                            <p>12mp, Wide angle lens</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <i class="fa-solid fa-mobile-notch"></i>
+                        <div>
+                            <h1>Display</h1>
+                            <p>12mp, Wide angle lens</p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <i class="fa-solid fa-battery-three-quarters"></i>
+                        <div>
+                            <h1>Baterry life</h1>
+                            <p>12mp, Wide angle lens</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <i class="fa-solid fa-sim-cards"></i>
+                        <div>
+                            <h1>Storage</h1>
+                            <p>12mp, Wide angle lens</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "controls">
+                <i class="fa-solid fa-angle-up" id ="upBtn"></i>
+                <h3>features</h3>
+                <i class="fa-solid fa-angle-up" id = "downBtn"></i>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transfrom;
+        var rotateSum;
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transfrom = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transfrom = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</html>
